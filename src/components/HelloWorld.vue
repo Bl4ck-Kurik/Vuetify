@@ -5,7 +5,7 @@
 
       <div class="text-body-2 font-weight-light mb-n1">Welcome to</div>
 
-      <h1 class="text-h2 font-weight-bold">Vuetify</h1>
+      <h1 class="text-h2 font-weight-bold">{{ message }}</h1>
 
       <div class="py-14" />
 
@@ -70,6 +70,12 @@
   </v-container>
 </template>
 
-<script setup>
-  //
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello  World'
+    }
+  }
+}
 </script>
