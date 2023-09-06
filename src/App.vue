@@ -1,7 +1,6 @@
 <template>
     <h1>{{ title }}</h1>
-    <FlexNav :items="navItems" />
-    <VuetifyNav :items="navItems"/>
+    <VuetifySidebar :items="sidebar"/>
     <div id="router-view">
       <router-view/>
     </div>
@@ -10,46 +9,40 @@
   <script>
   import FlexNav from '@/components/FlexNav.vue'
   import VuetifyNav from '@/components/VuetifyNav.vue'
+  import VuetifySidebar from '@/components/VuetifySidebar.vue'
 
   export default {
     name: 'App',
     data () {
       return {
         title: 'My First Vue APP',
-        navItems: [
-          {
-            label: "Home",
-            link: "#1",
-          },
-          {
-            label: "Example Tab",
-            link: "#2",
-            subItems: [
-              {
-                label: "sub 1",
-                link: "#sub1",
-              },
-              {
-                label: "sub 2",
-                link: "#sub2",
-              },
-            ],
-          },
-          {
-            label: "Example Tab",
-            link: "#2",
-            subItems: [
-              {
-                label: "sub 1",
-                link: "#sub1",
-              },
-              {
-                label: "sub 2",
-                link: "#sub2",
-              },
-            ],
-          },
-        ],
+        sidebar: {
+          head: [
+            {
+              avatar: 'https://randomuser.me/api/portraits/lego/6.jpg',
+              title: 'Juan Bricktez',
+              subTitle: 'juan.bricktez@legomail.com'
+            }
+          ],
+          navList: [
+            {
+              icon: 'mdi-home',
+              label: 'Home',
+              link: '/',
+            },
+            {
+              icon: 'mdi-account',
+              label: 'Your Account',
+              link: '#account',
+            },
+            {
+              icon: 'mdi-newspaper-variant-multiple',
+              label: 'Latest News',
+              link: '#news',
+            },
+            
+          ] 
+        }
       }
     },
     methods: {
@@ -58,6 +51,7 @@
     components: {
       FlexNav,
       VuetifyNav,
+      VuetifySidebar,
     }
   }
   </script>
@@ -69,7 +63,6 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #0c0c0c;
-    /* background-color: #000; */
     margin: 60px 0 120px;
   }
   </style>

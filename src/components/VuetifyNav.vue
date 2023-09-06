@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="v-nav" style="margin-top: 50px;">
+        <div class="v-nav">
             <v-btn ref="buttonsWithMenu" :append-icon="subIcon(item.subItems)" color="primary" v-for="(item, index) in items" :key="index" :value="index" @click="gotoLink(item.link)">
                 {{ item.label }}
                 <v-menu open-on-hover activator="parent" v-if="item.subItems && item.subItems.length > 0">
@@ -64,13 +64,15 @@ export default {
 <style>
     .v-nav .v-btn {
         border-radius: 0;
-        box-shadow: 0px 3px 5px 0px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 2px 2px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
+        background-color: #1866c00e;
+        box-shadow: none;
+        /* box-shadow: 0px 3px 5px 0px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 2px 2px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 5px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12)); */
     }
     .v-nav .v-btn:first-child {
-        border-radius: 4px 0 0 4px;
+        border-radius: 0 0 0 4px;
     }
     .v-nav .v-btn:last-child {
-        border-radius: 0 4px 4px 0;
+        border-radius: 0 0 4px 0;
     }
     .v-nav .menu-expanded span.v-btn__append>i {
         transform: rotate(90deg);
