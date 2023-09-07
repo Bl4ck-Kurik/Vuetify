@@ -11,7 +11,12 @@
                 </v-list>
                 <v-divider></v-divider>
                 <v-list density="compact" nav>
-                    <v-list-item v-for="(item, index) in items.navList" :key="index" :value="index" @click="gotoLink(item.link)" :prepend-icon="item.icon" :title="item.label"></v-list-item>
+                    <v-list-item 
+                        v-for="(item, index) in items.navList" :key="index" :value="index" 
+                        @click="gotoLink(item.link)" 
+                        :prepend-icon="item.icon" 
+                        :title="item.label"
+                    ></v-list-item>
                 </v-list>
             </v-navigation-drawer>
         </v-layout>

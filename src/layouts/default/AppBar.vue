@@ -15,7 +15,11 @@ export default {
       navItems: [
           {
             label: "Home",
-            link: "#1",
+            link: "/",
+          },
+          {
+            label: "Cards",
+            link: "/cards",
           },
           {
             label: "Example Tab",
