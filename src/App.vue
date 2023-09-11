@@ -63,6 +63,5 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #0c0c0c;
-    margin: 60px 0 120px;
   }
   </style>
