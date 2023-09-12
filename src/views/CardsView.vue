@@ -3,7 +3,8 @@
         <v-btn @click="openOverlay">Create Card</v-btn>
         <v-overlay class="card-create" v-model="create" style="padding: auto;">
                 <div class="content-inner">
-                    <Create/>
+                    <Create @updateValue="getValue"/>
+                    <p>{{'Title: ' + title + ' Content: ' + content}}</p>
                     <div class="buttons">
                         <v-btn @click="closeOverlay">Close</v-btn>
                         <v-btn color="primary">Save</v-btn>
@@ -22,6 +23,8 @@ export default {
     data() {
         return {
             create: false,
+            title: '',
+            content: '',
         }
     },
     methods: {
@@ -31,6 +34,13 @@ export default {
         closeOverlay() {
             this.create = false
         },
+        getValue(payload) {
+            if (payload.id === 'card-title') {
+                this.title = payload.value
+            } else if (payload.id === 'card-content') {
+                this.content = payload.value
+            }
+        }
     },
 }
 </script>

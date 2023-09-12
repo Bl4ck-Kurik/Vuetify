@@ -9,6 +9,8 @@
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@formkit/themes": "^1.0.0",
+    "@formkit/vue": "^1.0.0",
     "@mdi/font": "7.0.96",
     "axios": "^1.5.0",
     "core-js": "^3.29.0",

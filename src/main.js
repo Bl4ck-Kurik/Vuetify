@@ -12,9 +12,11 @@ import { createApp } from 'vue'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
+import { plugin, defaultConfig } from '@formkit/vue'
+import '@formkit/themes/genesis'
 
 const app = createApp(App)
 
 registerPlugins(app)
 
-app.mount('#app')
+app.use(plugin, defaultConfig).mount('#app')
