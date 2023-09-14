@@ -1,10 +1,10 @@
 <template>
     <div class="create-card">
-        <!-- Prevent Enter from submitting -->
         <FormKit
             type="form"
             id="create-card"
             @change="submitToParent"
+            @keydown.enter.prevent
             :actions="false"
          >
             <FormKit type="text" id="card-title" label="Title"/>

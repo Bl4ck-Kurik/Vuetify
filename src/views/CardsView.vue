@@ -30,6 +30,8 @@ export default {
     methods: {
         openOverlay() {
             this.create = true
+            this.title = ''
+            this.content = ''
         },
         closeOverlay() {
             this.create = false
