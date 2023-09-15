@@ -1,12 +1,6 @@
 <template>
     <div class="create-card">
-        <FormKit
-            type="form"
-            id="create-card"
-            @change="submitToParent"
-            @keydown.enter.prevent
-            :actions="false"
-         >
+        <FormKit type="form" id="create-card" @change="submitToParent" @keydown.enter.prevent :actions="false">
             <FormKit type="text" id="card-title" label="Title"/>
             <FormKit type="textarea" id="card-content" label="Content" rows="10"/>
         </FormKit>
