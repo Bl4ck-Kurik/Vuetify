@@ -2,6 +2,7 @@
     <div id="app-content">
       <h1>{{ title }}</h1>
       <VuetifySidebar :items="sidebar"/>
+      <Prime/>
       <div id="router-view">
         <router-view/>
       </div>
@@ -12,6 +13,7 @@
 import FlexNav from '@/components/FlexNav.vue'
 import VuetifyNav from '@/components/VuetifyNav.vue'
 import VuetifySidebar from '@/components/VuetifySidebar.vue'
+import Prime from '@/components/PrimZahl.vue'
 
 export default {
   name: 'App',
@@ -54,6 +56,7 @@ export default {
     FlexNav,
     VuetifyNav,
     VuetifySidebar,
+    Prime
   }
 }
 </script>
