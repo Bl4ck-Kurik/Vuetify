@@ -15,6 +15,7 @@ export default {
     },
     methods: {
         prime() {
+            this.currentPrime = ''
             const duration = 2000
             const startTime = Date.now()
             for (let i = 2; ; i++) {
