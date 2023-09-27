@@ -19,6 +19,11 @@ const routes = [
         name: 'Cards',
         component: () => import('@/views/CardsView.vue'),
       },
+      {
+        path: '/composition',
+        name: 'Composition Api',
+        component: () => import('@/views/CompositionView.vue'),
+      },
     ],
   },
 ]

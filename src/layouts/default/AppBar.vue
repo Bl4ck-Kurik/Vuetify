@@ -22,6 +22,10 @@ export default {
             link: "/cards",
           },
           {
+            label: "Composition Api",
+            link: "/composition",
+          },
+          {
             label: "Example Tab",
             link: "#2",
             subItems: [

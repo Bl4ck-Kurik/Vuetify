@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-btn @click="currentPrime = ''">Clear</v-btn>
-        <h1>{{ currentPrime }}</h1>
+        <p>{{ currentPrime }}</p>
         <v-btn @click="prime" style="margin-top: 20px;">Start Prime</v-btn>
     </div>
 </template>
