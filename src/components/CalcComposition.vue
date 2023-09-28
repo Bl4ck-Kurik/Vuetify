@@ -22,13 +22,13 @@
                 <v-btn @click="pressed('7')">7</v-btn>
                 <v-btn @click="pressed('8')">8</v-btn>
                 <v-btn @click="pressed('9')">9</v-btn>
-                <v-btn @click="pressed('*')">*</v-btn>
+                <v-btn @click="pressed('*')">×</v-btn>
             </tr>
             <tr>
                 <v-btn @click="pressed('c')">C</v-btn>
                 <v-btn @click="pressed('0')">0</v-btn>
                 <v-btn @click="pressed('=')">=</v-btn>
-                <v-btn @click="pressed('/')">/</v-btn>
+                <v-btn @click="pressed('/')">÷</v-btn>
             </tr>
         </table>
     </div>
