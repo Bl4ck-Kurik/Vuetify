@@ -39,9 +39,9 @@ import { ref, onMounted, onUnmounted, watch, nextTick} from 'vue'
 
 let prevInput = ref('')
 let currentInput = ref('')
+let selectedOperator = ref('')
 const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 const operators = ['+', '-', '*', '/']
-let selectedOperator = ref('')
 const screenH2 = ref(null)
 
 const pressed = (value) => {
