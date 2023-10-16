@@ -24,6 +24,11 @@ const routes = [
         name: 'Composition Api',
         component: () => import('@/views/CompositionView.vue'),
       },
+      {
+        path: '/task',
+        name: 'Task List',
+        component: () => import('@/views/TaskView.vue'),
+      },
     ],
   },
 ]

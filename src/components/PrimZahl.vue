@@ -18,23 +18,22 @@ export default {
             this.currentPrime = ''
             const duration = 2000
             const startTime = Date.now()
-            for (let i = 2; ; i++) {
-                if (Date.now() - startTime > duration) {
-                    break
-                }
+            for (let i = 2; Date.now() - startTime < duration; i++) {
                 let isPrime = true;
                 let sr = Math.sqrt(i);
-                for (let d = 2; d <= sr; d++) {
-                    if (i % d == 0) {
-                        isPrime = false
-                        break
+                if (sr % 1 != 0) {
+                    for (let d = 2; d <= sr; d++) {
+                        if (i % d == 0) {
+                            isPrime = false
+                            break
+                        }
+                    }
+                    if (isPrime) {
+                        this.currentPrime = this.currentPrime + i + '; '
+                        // console.log(i)
                     }
                 }
-                if (isPrime) {
-                    this.currentPrime = this.currentPrime + i + '; '
-                    // console.log(i)
-                }
-            }  
+            }
         }
     },
 }
