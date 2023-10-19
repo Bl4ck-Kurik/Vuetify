@@ -54,7 +54,7 @@ export default {
                             }
                         }
                     })
-                    observer.observe(buttonElem, { attributes: true });
+                    observer.observe(buttonElem, { attributes: true })
                 }
             })
         })
