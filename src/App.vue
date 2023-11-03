@@ -1,6 +1,6 @@
 <template>
     <div id="app-content">
-      <h1>{{ title }}</h1>
+      <h1>{{ title }}: {{ versionText }}</h1>
       <VuetifySidebar :items="sidebar"/>
       <Prime/>
       <div id="router-view">
@@ -51,6 +51,11 @@ export default {
   },
   methods: {
     
+  },
+  computed: {
+    versionText() {
+        return import.meta.env.VUE_APP_VERSION;
+    }
   },
   components: {
     FlexNav,
